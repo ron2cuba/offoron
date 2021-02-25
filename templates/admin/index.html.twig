@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration | Offoron records{% endblock %}
+
+{% block body %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+
+    {# <div class="container admin">
+        <aside>
+            <div class="left-column">
+                <ul>
+                    <a href="" class="create-style"><li>Créer un style de musique</li></a>
+                    <a href="" class="create-band"><li>Créer un groupe</li></a>
+                    <a href="" class="create-album"><li>Créer un album</li></a>
+                    <a href="" class="create-member"><li>Créer un Membre</li></a>
+                    <a href="" class="modify-infos-label"><li>Modifier infos label</li></a>
+                    <a href="" class="back-to-admin"><li>Admin</li></a>
+                </ul>
+            </div>
+        </aside>
+        
+        <div class="main-display">
+            <img src="assets/img/header-offoron.png" alt="header de la page administration">
+            <h1 class="h1">Administration</h1>
+            <h2 class="h2">workflow:</h2>
+            <p>création d'un style > création d'un groupe > ajouts des membres | ajout des albums</p>
+        </div>
+    </div> #}
+{% endblock %}
