@@ -3,33 +3,38 @@
 {% block title %}Administration | Offoron records{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <nav class="navbar-vertical navbar-glass navbar navbar-expand-xl navbar-light">
-        <div class="d-flex align-items-center">
-            <div class="toggle-icon-wrapper">
-                <button type="button" id="toggleNavigationToolTip" class="navbar-toogler-hmaburger-icon navbar-vertical-toogle btn btn-link">
-                    <span class="toggle-icon-wrapper">
-                        <span class="toggle-line"></span>
-                    </span>
-                </button>
-            </div>
-        </div>
-        <aside class="scrollbar collapse navbar-collapse">
-            <ul class="navbar-nav flex-column">
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un style de musique</li></a>
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un groupe</li></a>
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un album</li></a>
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un Membre</li></a>
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Modifier infos label</li></a>
-                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Admin</li></a>
+    <div class="container admin">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropDownAdminMenu" data-bs-toggle="dropdown" aria-expanded="true">
+            Créations
+            </button>
+            <ul class="dropdown-menu" aria-labbeledby="dropDownAdminMenu">
+                <li><a href="#" class="dropdown-item">Créer Style</a></li>
+                <li><a href="#" class="dropdown-item">Créer Groupe</a></li>
+                <li><a href="#" class="dropdown-item">Créer un Album</a></li>
+                <li><a href="#" class="dropdown-item">Créer un Membre</a></li>
             </ul>
-        </aside>
+            <button class="btn dropdown-toggle" type="button" id="dropDownAdminMenu" data-bs-toggle="dropdown" aria-expanded="true">
+            Modifications
+            </button>
+            <ul class="dropdown-menu" aria-labbeledby="dropDownAdminMenu">
+                <li><a href="#" class="dropdown-item">Modifier Style</a></li>
+                <li><a href="#" class="dropdown-item">Modifier Groupe</a></li>
+            </ul>
+        </div>
         
         <div class="main-display">
-            <img src="{{ asset('build/images/header-offoron.png') }}" alt="header de la page administration">
-            <h1 class="h1">Administration</h1>
-            <h2 class="h2">workflow:</h2>
-            <p>création d'un style > création d'un groupe > ajouts des membres | ajout des albums</p>
+            <img src="{{ asset('build/images/header-offoron.png') }}" class="header-admin" alt="header de la page administration">
+            <h1 class="display-3">Administration</h1>
+            <h2 class="display-6">workflow:</h2>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Créer Style</li>
+                    <li class="breadcrumb-item">Créer Groupe</li>
+                    <li class="breadcrumb-item">Créer Membre</li>
+                    <li class="breadcrumb-item">Créer Album</li>
+                </ol>
+            </nav>
         </div>
     </div>
 {% endblock %}
