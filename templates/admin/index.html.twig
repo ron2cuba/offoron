@@ -3,18 +3,26 @@
 {% block title %}Administration | Offoron records{% endblock %}
 
 {% block body %}
-    <div class="container admin">
-        <aside>
-            <div class="left-column">
-                <ul>
-                    <a href="" class="create-style"><li>Créer un style de musique</li></a>
-                    <a href="" class="create-band"><li>Créer un groupe</li></a>
-                    <a href="" class="create-album"><li>Créer un album</li></a>
-                    <a href="" class="create-member"><li>Créer un Membre</li></a>
-                    <a href="" class="modify-infos-label"><li>Modifier infos label</li></a>
-                    <a href="" class="back-to-admin"><li>Admin</li></a>
-                </ul>
+    <div class="container">
+        <nav class="navbar-vertical navbar-glass navbar navbar-expand-xl navbar-light">
+        <div class="d-flex align-items-center">
+            <div class="toggle-icon-wrapper">
+                <button type="button" id="toggleNavigationToolTip" class="navbar-toogler-hmaburger-icon navbar-vertical-toogle btn btn-link">
+                    <span class="toggle-icon-wrapper">
+                        <span class="toggle-line"></span>
+                    </span>
+                </button>
             </div>
+        </div>
+        <aside class="scrollbar collapse navbar-collapse">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un style de musique</li></a>
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un groupe</li></a>
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un album</li></a>
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Créer un Membre</li></a>
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Modifier infos label</li></a>
+                <li class="nav-item"><a aria-expanded="true" class="dropdown-indicator cursor-pointer nav-link"> Admin</li></a>
+            </ul>
         </aside>
         
         <div class="main-display">
