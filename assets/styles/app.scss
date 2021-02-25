@@ -1,3 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
-@import "admin-panel";
+@import "./vendors/bootstrap";
+@import "./vendors/fontawesome";
+@import "./base/reset";
+@import "./abstracts/_variables";
+@import "./pages/admin-panel";
