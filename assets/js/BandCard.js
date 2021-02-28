@@ -35,14 +35,14 @@ class BandCard extends HTMLElement{
     
     connectedCallback(){
         this.shadowRoot.querySelector('img').addEventListener('click', ()=>{
-            console.log('yeah!');
+            console.log('yeah ' + this.getAttribute('name') + "!");
         });
     }
 
     disconnectedCallback() {
         console.log('Custom square element removed from page.');
     }
-    
+
 } // end class
 
 customElements.define('offoron-band', BandCard);
