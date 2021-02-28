@@ -1,36 +1,29 @@
 body{
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 93%, rgba(255,235,235,1) 100%);
-    // background: linear-gradient(-45deg, #ffffff, #f5f5f5, #e2e2e2, #aaaaaa);
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-    // animation: gradient 15s ease infinite;
-    // background-size: 400% 400%;
     height: 100vh;
 }
-/* @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
+
 a {
     cursor: pointer;
 }
+
 .dropdown{
     background-color: #fff;
     box-shadow: $shadow-2;
     border-radius: $strong-radius;
     margin: .5rem 0;
+    display: flex;
+    span{
+        margin: .5rem 0;
+        .back-to-admin:hover{
+            background-color: #fff;
+        }
+    }
 }
 button:focus:not(:focus-visible) {
-    box-shadow: $outline;
+    box-shadow: $outline-dark-light;
 }
+
 .main-display{
     .header-admin{
         width: 100%;
@@ -43,3 +36,38 @@ button:focus:not(:focus-visible) {
     padding: 1rem;
     background-color: $white;
 }
+
+h1, h2 {
+    margin: .5rem;
+}
+
+.bg-green {
+    background-color: #26A69A!important;
+    margin-right: 0.1rem;
+}
+
+iframe {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: $shadow-5;
+    border-radius: $light-radius;
+}
+
+
+
+// background: linear-gradient(-45deg, #ffffff, #f5f5f5, #e2e2e2, #aaaaaa);
+// background-repeat: no-repeat;
+// background-size: 100%;
+// animation: gradient 15s ease infinite;
+// background-size: 400% 400%;
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
