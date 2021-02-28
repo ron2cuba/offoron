@@ -17,4 +17,13 @@ class BandController extends AbstractController
             'controller_name' => 'BandController',
         ]);
     }
+    /**
+     * @Route("/admin/band/create", name="band_create")
+     */
+    public function createBand(): Response
+    {
+        return $this->render('admin/create.html.twig', [
+            'controller_name' => 'BandController',
+        ]);
+    }
 }
