@@ -13,7 +13,7 @@ Encore
         from: './assets/img',
         // optional target path, relative to the output dir
         to: 'images/[path][name].[hash:8].[ext]',
-        pattern: /\.(png|jpg|jpeg|svg|ico)$/
+        pattern: /\.(png|jpg|jpeg|svg|ico|gif)$/
     })
     // public path used by the web server to access the output path
     .setPublicPath('/build')
