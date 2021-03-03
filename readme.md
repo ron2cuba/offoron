@@ -239,4 +239,4 @@ public function editProduct($id, ProductRepository $productRepository)
 ```
 todo
 
-modifer groupe doit me renvoyer tous les groupes
+un click sur un groupe doit me renvoyer vers la page de modification d'un groupe
