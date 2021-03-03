@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container admin" data-loader="{{ asset('build/images/audio.svg') }}">
         <div class="dropdown">
-            <span><a class="dropdown-item back-to-admin">Admin</a></span>
+            <span><a class="dropdown-item back-to-admin">{{ pageName }}</a></span>
             <button class="btn dropdown-toggle" type="button" id="dropDownAdminMenuCreate" data-bs-toggle="dropdown" aria-expanded="true">
             Créations
             </button>
@@ -19,10 +19,10 @@
             Modifications
             </button>
             <ul class="dropdown-menu" aria-labbeledby="dropDownAdminMenuModify">
-                <li><a href="#" class="dropdown-item">Modifier Style</a></li>
-                <li><a href="#" class="dropdown-item">Modifier Groupe</a></li>
-                <li><a href="#" class="dropdown-item">Modifier Album</a></li>
-                <li><a href="#" class="dropdown-item">Modifier Membre</a></li>
+                <li><a href="#" class="dropdown-item edit-style">Modifier Style</a></li>
+                <li><a href="#" class="dropdown-item edit-band">Modifier Groupe</a></li>
+                <li><a href="#" class="dropdown-item edit-album">Modifier Album</a></li>
+                <li><a href="#" class="dropdown-item edit-member">Modifier Membre</a></li>
             </ul>
         </div>
         
