@@ -43,6 +43,11 @@ class Band
      */
     private $style;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_featured;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +109,18 @@ class Band
     public function setStyle(?style $style): self
     {
         $this->style = $style;
+
+        return $this;
+    }
+
+    public function getIsFeatured(): ?bool
+    {
+        return $this->is_featured;
+    }
+
+    public function setIsFeatured(bool $is_featured): self
+    {
+        $this->is_featured = $is_featured;
 
         return $this;
     }
