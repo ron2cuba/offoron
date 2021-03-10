@@ -239,4 +239,4 @@ public function editProduct($id, ProductRepository $productRepository)
 ```
 todo
 
-un click sur un groupe doit me renvoyer vers la page de modification d'un groupe
+Twig : appeler un controller directement depuis un template
