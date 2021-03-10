@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\BandRepository;
+use Webmozart\Assert\Assert;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\BandRepository;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 /**
  * @ORM\Entity(repositoryClass=BandRepository::class)
