@@ -13,7 +13,7 @@ template.innerHTML = `
 class BandCard extends HTMLElement{
     constructor(){
         super();
-        this.attachShadow({mode: 'open'})
+        this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.shadowRoot.querySelector('style').innerText = this.createStyle();
         this.shadowRoot.querySelector('h5').innerText = this.getAttribute('name');

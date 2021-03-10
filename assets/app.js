@@ -10,8 +10,10 @@ import './styles/app.scss';
 
 import { Tooltip, Toast, Popover } from 'bootstrap';
 
-import './js/FormPanel';
-import './js/BandCard';
+import './js/navbar';
+// import './js/FormPanel';
+// import './js/BandCard'; 
+// import './js/BtnAdmin';
 
 // start the Stimulus application
 import './bootstrap';
