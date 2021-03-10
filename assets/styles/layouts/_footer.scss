@@ -1,0 +1,19 @@
+.footer{
+    a{
+        text-decoration: none;
+    color: #212121;
+        &:hover{
+            color: $link-hover;
+        }
+    }
+    section {
+        text-align: center;
+        h5,.list-unstyled{
+            margin-bottom: .35rem;
+            text-align: start;
+        }
+    }
+    img.vinyl{
+        height: 15px;
+    }
+}

@@ -1,10 +1,21 @@
 body {
-    background-color: #ececec;
+    background-color: #fff;
 }
 .container{
+    background-color: #fdfdfd;
     margin-top: 1rem;
     padding: 2rem;
     border-radius: $light-radius;
     box-shadow: $shadow-1;
-    color: rgb(246, 246, 246);
+}
+.navbar-brand {
+    img.vinyl{
+        position: absolute;
+        top:1rem;
+        height: 25px;
+    }
+    &:after {
+        content: "Offoron Records";
+        margin-left: 2rem;
+    }
 }
