@@ -5,41 +5,49 @@
 {% block body %}
     <div class="container admin" data-loader="{{ asset('build/images/audio.svg') }}">
         <div class="dropdown">
-            <span><a class="dropdown-item back-to-admin">{{ pageName }}</a></span>
+            {# <span><a class="dropdown-item back-to-admin">{{ pageName }}</a></span> #}
             <button class="btn dropdown-toggle" type="button" id="dropDownAdminMenuCreate" data-bs-toggle="dropdown" aria-expanded="true">
             Créations
             </button>
             <ul class="dropdown-menu" aria-labbeledby="dropDownAdminMenuCreate">
-                <li><a class="dropdown-item create-style">Créer Style</a></li>
-                <li><a class="dropdown-item create-band">Créer Groupe</a></li>
-                <li><a class="dropdown-item create-album">Créer un Album</a></li>
-                <li><a class="dropdown-item create-member">Créer un Membre</a></li>
+                <li><a class="dropdown-item create style">Créer Style</a></li>
+                <li><a class="dropdown-item create band">Créer Groupe</a></li>
+                <li><a class="dropdown-item create album">Créer un Album</a></li>
+                <li><a class="dropdown-item create member">Créer un Membre</a></li>
             </ul>
             <button class="btn dropdown-toggle" type="button" id="dropDownAdminMenuModify" data-bs-toggle="dropdown" aria-expanded="true">
             Modifications
             </button>
             <ul class="dropdown-menu" aria-labbeledby="dropDownAdminMenuModify">
-                <li><a href="#" class="dropdown-item edit-style">Modifier Style</a></li>
-                <li><a href="#" class="dropdown-item edit-band">Modifier Groupe</a></li>
-                <li><a href="#" class="dropdown-item edit-album">Modifier Album</a></li>
-                <li><a href="#" class="dropdown-item edit-member">Modifier Membre</a></li>
+                <li><a href="#" class="dropdown-item edit style">Modifier Style</a></li>
+                <li><a href="#" class="dropdown-item edit band">Modifier Groupe</a></li>
+                <li><a href="#" class="dropdown-item edit album">Modifier Album</a></li>
+                <li><a href="#" class="dropdown-item edit member">Modifier Membre</a></li>
             </ul>
         </div>
         
         <div class="main-display">
-            <img src="{{ asset('build/images/header-offoron.png') }}" class="header-admin" alt="header de la page administration">
-            {# le workflow #}
-            <h2 class="display-6 text-muted">workflow:</h2>
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='white'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item badge bg-green">Créer Style</li>
-                    <li class="breadcrumb-item badge bg-green">Créer Groupe</li>
-                    <li class="breadcrumb-item badge bg-green">Créer Membre</li>
-                    <li class="breadcrumb-item badge bg-green">Créer Album</li>
-                </ol>
-            </nav>
+            
             {# le workflow #}
             <p class="text-muted">Choix dans le menu déroulant</p>
+            {# home #}
+            <template id="home">
+                {% include "_partials/_homeAdmin.html.twig" %}
+            </template>
+
+            {# create band #}
+            <template id="create-band">
+                {% include "_partials/_createBand.html.twig" %}            
+            </template>
+            
+            {# create style  #}
+            <template id="create-style">
+                {% include "_partials/_createStyle.html.twig" %}
+            </template>
+            
+            {# rendering #}
+            <div class="rendering"></div>
+
         </div>
     </div>
 {% endblock %}
