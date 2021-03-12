@@ -5,18 +5,25 @@
 {% block body %}
   {% include "_partials/_navbar.html.twig" %}
 
-  <div class="container">
-  
-  {% for artist in listAllArtists %}
-    <offoron-band class="offoronBand"name="{{ artist.name }}" image="{{ artist.mainPicture }}">
-      <span slot="description">{{ artist.description }}</span>
-    </offoron-band>
-  {% endfor %}
-  
-  
+  <div class="container mb-4">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for artist in listAllArtists %}
+          <div class="card mb-4 shadow-sm mx-2">
+              <img src="{{artist.mainPicture}}" class="card-img-top" alt="image {{artist.name}}">
+            <div class="card-body">
+              <h5 class="card-title">{{artist.name}}</h5>
+              <p class="card-text">{{artist.description|slice(0, 100)}} ...</p>
+              <a href="#" class="btn btn-primary stretched-link">En savoir plus</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>{# /row #}
   </div>
 
+{% endblock %}
 
+{% block footer %}
+  {% include "_partials/_footer.html.twig" %}
 {% endblock %}
 
 
