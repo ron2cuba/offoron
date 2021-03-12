@@ -1,2 +1,53 @@
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <section class="mb-4 px-4">
+            <a href="" class="" role="button">
+                <i class="fab fa-bandcamp"></i>
+                Bandcamp
+            </a>
+            <a href="" class="" role="button">
+                <i class="fab fa-facebook"></i>
+                Faceboook
+            </a>
+            <a href="" class="" role="button">
+                <i class="fas fa-at"></i>
+                Contact
+            </a>
+        </section>
+        <section class="link">
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 mx-2">
+                    <h5 class="text-uppercase">Styles :</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        {% for style in styles %}
+                        <li>
+                            <img src="{{ asset('build/images/vinyl.svg') }}" class="vinyl" alt="icone styles" >
+                            <a href="#!" class="">{{style.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Connexions :</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <ul>
+                            <li>
+                                <a href="" class="" role="button">
+                                    <i class="fas fa-at"></i>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
