@@ -5,25 +5,25 @@
 {% endblock %}
 
 {% block body %}
-    {{ form_start(formView) }}
+    {{ form_start(formCreateBand) }}
 
-    {{ form_errors(formView) }}
+    {{ form_errors(formCreateBand) }}
     <h1 class="h1">Création d'un Groupe | Artiste</h1>
     <div class="row">
 
         <div class="col">
-            {{ form_row(formView.name) }}
-            {{ form_row(formView.mainPicture) }}
+            {{ form_row(formCreateBand.name) }}
+            {{ form_row(formCreateBand.mainPicture) }}
         </div>
         <div class="col">
-            {{ form_row(formView.description) }}
+            {{ form_row(formCreateBand.description) }}
         </div>
 
     </div>
 
     <div class="row">
-         {{ form_row(formView.style)}}
-         {{ form_row(formView.isFeatured)}}
+         {{ form_row(formCreateBand.style)}}
+         {{ form_row(formCreateBand.isFeatured)}}
     </div>
 
     <button type="submit" class="btn btn-success validate">
@@ -31,7 +31,7 @@
         Enregistrer
     </button>
 
-    {{ form_end(formView) }}
+    {{ form_end(formCreateBand) }}
 
 {% endblock %}
 

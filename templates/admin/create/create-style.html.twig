@@ -1,1 +1,32 @@
-yeah
+{% extends "base.html.twig" %}
+{% block title %}
+    Edition des Styles
+{% endblock %}
+
+{% block body %}
+    {{ form_start(formView) }}
+
+    {{ form_errors(formView) }}
+    <h1 class="h1">Création d'un Groupe | Artiste :</h1>
+    
+    <div class="row">
+
+        <div class="col">
+            {{ form_row(formView.name) }}
+            {{ form_row(formView.mainPicture) }}
+        </div>
+        <div class="col">
+            {{ form_row(formView.description) }}
+        </div>
+
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-success validate">
+        <i class="far fa-save"></i> 
+        Enregistrer
+    </button>
+
+    {{ form_end(formView) }}
+{% endblock %}
