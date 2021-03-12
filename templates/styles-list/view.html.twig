@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StyleController!{% endblock %}
+
+{% block body %}
+    {% for style in styles %}
+        {{style.name}}
+    {% endfor %}
+{% endblock %}
