@@ -6,7 +6,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Rechercher</button>
     </form>
-        {% for band in bands %}
-        <button type="button" class="btn btn-outline-dark">{{band.name}}</button>
-        {% endfor %}
+    {% for band in bands %}
+        <button type="button" id="access" class="btn btn-outline-dark" data-target="{{band.id}}">{{band.name}}</button>        
+    {% endfor %}
 {% endblock %}
