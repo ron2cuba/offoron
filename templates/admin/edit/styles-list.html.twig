@@ -9,7 +9,9 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Rechercher</button>
     </form>
+    <h1 class="h1">{{page}}</h1>
+    <p>Style à éditer :</p>
     {% for style in styles %}
-        <button type="button" class="btn btn-outline-dark">{{style.name}}</button>
+        <button type="button" id="click-to-edit" class="btn btn-outline-dark" data-target="{{style.id}}">{{style.name}}</button>
     {% endfor %}
 {% endblock %}
