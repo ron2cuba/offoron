@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use Faker\Factory;
 use App\Entity\Band;
+use App\Entity\User;
 use App\Entity\Style;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -24,11 +25,28 @@ class AppFixtures extends Fixture
         $faker->addProvider(new \Bezhanov\Faker\Provider\Placeholder($faker));
         $faker->addProvider(new \Bezhanov\Faker\Provider\Science($faker));
 
+        $admin = new User();
+        $admin->setEmail ('admin@mail.com')
+              ->setPassword('password')
+              ->setFullName('Admin')
+              ->setRoles(['ROLE_ADMIN']);
+        $manager->persist($admin);
+        
+
+        for($u = 0; $u<5;$u++){
+            $user = new User();
+            $user->setEmail("user$u@mail.com")
+                ->setFullName($faker->name())
+                ->setPassword("password");
+
+            $manager->persist($user);
+        }
+
         for($s=0; $s<6;$s++){
             $style= new Style();
 
             $style->setName($faker->chemicalElement)
-            ->setSlug($this->slugger->slug(\strtolower($style->getName())))
+            // ->setSlug($this->slugger->slug(\strtolower($style->getName())))
             ->setMainPicture($faker->avatar)
             ->setDescription($faker->text());
 
@@ -41,7 +59,10 @@ class AppFixtures extends Fixture
                 ->setSlug($this->slugger->slug(\strtolower($band->getName())))
                 ->setStyle($style)
                 ->setMainPicture($faker->imageUrl(640, 480, $band->getName(), false))
-                ->setDescription($faker->text());
+                ->setDescription($faker->text())
+                ->setIsFeatured('0')
+                ;
+
 
                 $manager->persist($band);
             }
