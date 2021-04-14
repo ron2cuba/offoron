@@ -29,6 +29,12 @@
         <img src="{{ asset('build/images/vinyl.svg') }}" class="vinyl" alt="icone styles" >
       </a>
   </div>
+  
+  {% if app.user %}
+    <li style="list-style: none;">
+        <a href="{{path('security_logout')}}" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+    </li>
+  {% endif %}
   <ul class="nav-links">
     {% for style in styleRepository.findAll() %}
       <li><a href="" class="nav-link">{{style.name}}</a></li>

@@ -28,7 +28,7 @@ class BandController extends AbstractController
 {
     /**
      *  Display page Details for one band
-     *  @Route("/{slug}", name="band_show")
+     *  @Route("/{slug}", name="band_show", priority=1)
      */
     public function show($slug, BandRepository $bandRepository)
     {
@@ -125,20 +125,10 @@ class BandController extends AbstractController
 
     /**
      * Display page details for a band
-     * @Route("/{slug}", name="band_details")
+     * @Route("/{slug}", name="band_details", priority=-1)
      */
     public function viewBand($slug, BandRepository $bandRepository)
     {
-        /**
-         * redirect if slug === styles
-         */
-        if($slug === "styles" ){
-            
-            $response = $this->forward('App\Controller\StyleController::view', []);
-
-            return $response;
-        }
-
         $details = $bandRepository->findOneBy([
             'slug'=>$slug
         ]);

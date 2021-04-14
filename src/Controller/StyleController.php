@@ -16,15 +16,14 @@ class StyleController extends AbstractController
 {
     /**
      * Display all Styles in Db
-     * @Route("/styles", name="style")
+     * @Route("/styles", name="styles", priority=2)
      */
     public function view(StyleRepository $styleRepository): Response
     {
-        echo('yeah');
-        /* $styles =$styleRepository->findAll();
+        $styles =$styleRepository->findAll();
         return $this->render('styles-list/view.html.twig', [
             'styles' => $styles,
-        ]); */
+        ]);
     }
     /**
      * Display style page edition
@@ -40,6 +39,8 @@ class StyleController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
 
             $em->flush();
+
+            return $this->redirectToRoute('styles');
         }
 
         $formView = $form->createView();

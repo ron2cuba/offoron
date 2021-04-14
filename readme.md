@@ -237,6 +237,4 @@ public function editProduct($id, ProductRepository $productRepository)
     ])
 }
 ```
-todo
-
-Twig : appeler un controller directement depuis un template
+📖 Vraiment comprendre les Voters

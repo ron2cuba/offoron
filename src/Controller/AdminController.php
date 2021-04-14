@@ -15,7 +15,7 @@ class AdminController extends AbstractController
 {
     /**
      * injection du formulaire de creation de groupe dans le template
-     * @Route("/admin", name="admin")
+     * @Route("/admin", name="admin", priority=3)
      */
     public function createBand(Request $request, SluggerInterface $slugger, EntityManagerInterface $em): Response
     {

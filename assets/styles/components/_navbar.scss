@@ -9,6 +9,7 @@ nav{
     .navbar-brand{
         img.vinyl{
             animation:spin 4s linear infinite;
+            margin-top: .6rem;
         }
         color: #232323;
         letter-spacing: 4px;
@@ -20,7 +21,7 @@ nav{
         }
     }
     .nav-links{
-        width:30%;
+        // width:30%;
         display:flex;
         justify-content: space-around;
         a {
@@ -64,15 +65,15 @@ nav{
 }
 
 //tablette
-@media screen and (max-width: 1024px){
-    .nav-links{
-        display:flex;
-        justify-content: space-around;
-        width: 60%;
-    }
-}
+// @media screen and (max-width: 1024px){
+//     .nav-links{
+//         display:flex;
+//         justify-content: space-around;
+//         width: 50%;
+//     }
+// }
 //mobile
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     body{
         overflow-x: hidden;
     }
